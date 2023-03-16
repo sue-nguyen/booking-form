@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Moment -->
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Toastr -->
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h1>Travel Booking Form</h1>
+        <div class="row">
+          <div class="well sm 12">
+            Fill out the form and click the submit button when complete.
+          </div>
+          <div class="col-sm-6 panel-group">
+            <div class="panel panel-primary">
+              <div class="panel-heading"><b>TRAVELER INFORMATION</b></div>
+              <div class="panel-body">
+                <div class="form-group row">
+                  <label for="first-name" class="col-sm-4 col-form-label"
+                    >First Name:</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control required-field"
+                      id="first-name"
+                      name="first-name"
+                      placeholder="Jane"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="last-name" class="col-sm-4 col-form-label"
+                    >Last Name:</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control required-field"
+                      id="last-name"
+                      name="last-name"
+                      placeholder="Doe"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading"><b>TRAVELER CONTACT</b></div>
+              <div class="panel-body">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa-solid fa-phone" style="width: 15px"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control required-field"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your phone number"
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa-solid fa-envelope" style="width: 15px"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control required-field"
+                    id="mail"
+                    name="mail"
+                    placeholder="Your email address"
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa-solid fa-house" style="width: 15px"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control required-field"
+                    id="address"
+                    name="address"
+                    placeholder="Your billing address"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading"><b>TRIP INFORMATION</b></div>
+              <div class="panel-body">
+                <div class="form-group row">
+                  <label for="adults" class="col-sm-4 col-form-label"
+                    >Number of Adults:</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="number"
+                      class="form-control required-field"
+                      id="adults"
+                      name="adults"
+                      min="0"
+                      max="50"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="kids" class="col-sm-4 col-form-label"
+                    >Number of Children:</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="number"
+                      class="form-control required-field"
+                      id="kids"
+                      name="kids"
+                      min="0"
+                      max="10"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label for="cin">Check-In Date:</label>
+                    <div class="input-group date">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="MMDDYYYY"
+                        id="cin"
+                        name="cin"
+                      />
+                      <span class="input-group-addon"
+                        ><i class="glyphicon glyphicon-calendar"></i
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label for="cout">Check-Out Date:</label>
+                    <div class="input-group date">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="MMDDYYYY"
+                        id="cout"
+                        name="cout"
+                      />
+                      <span class="input-group-addon"
+                        ><i class="glyphicon glyphicon-calendar"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 panel-group">
+            <div class="panel panel-primary">
+              <div class="panel-heading"><b>SPECIAL REQUEST</b></div>
+              <div class="panel-body">
+                <div class="form-group">
+                  <label for="preferrence"
+                    >Please state your preferences of hotel, transportations,
+                    dining, etc.
+                  </label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    id="preferrence"
+                    name="preferrence"
+                    placeholder="Type message here..."
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="medical"
+                    >Please state any special request related to medical
+                    conditions and/or health insurance.
+                  </label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    id="medical"
+                    name="medical"
+                    placeholder="Type message here..."
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="other"
+                    >Do you have any other travel request or extension?
+                  </label>
+                  <textarea
+                    rows="4"
+                    class="form-control"
+                    id="other"
+                    name="other"
+                    placeholder="Type message here..."
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="payment">Payment Method:</label><br />
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="cash"
+                      name="payment"
+                      value="cash"
+                    />Cash
+                  </label>
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="card"
+                      name="payment"
+                      value="card"
+                    />Credit/Debit Card
+                  </label>
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="paypal"
+                      name="payment"
+                      value="paypal"
+                    />Paypal
+                  </label>
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="venmo"
+                      name="payment"
+                      value="venmo"
+                    />Venmo
+                  </label>
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="cashapp"
+                      name="payment"
+                      value="cashapp"
+                    />CashApp
+                  </label>
+                </div>
+                <div style="margin-top: 10px">
+                  <label for="carhire">Car Hire:</label><br />
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="yes-carhire"
+                      name="carhire"
+                      value="yes-carhire"
+                    />Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input
+                      type="radio"
+                      id="no-carhire"
+                      name="carhire"
+                      value="no-carhire"
+                    />No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="btn-group">
+        <button class="btn btn-secondary" id="reset">
+          <i class="fa-solid fa-eraser"></i> Reset
+        </button>
+        <button class="btn btn-success" id="submit">
+          <i class="fa-solid fa-paper-plane"></i> Submit
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
